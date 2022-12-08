@@ -5,7 +5,7 @@ const bodyParse = require ("body-parser");
 const cors = require ("cors");
 const dotenv = require ("dotenv");
 const app = express();
-
+require("dotenv").config();
 //Assiging a port to run the applications by default we are asking for 8070 port if its not there use any available port (||) logical or is used to dipict this condition.
 const PORT = process.env.PORT || 8070;
 
