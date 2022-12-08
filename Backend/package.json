@@ -4,8 +4,9 @@
   "description": "cooking recipe collection",
   "main": "Cooking.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "node server.js" 
   },
   "author": "Sanuthi Vihansa",
   "license": "ISC"
 }
+
