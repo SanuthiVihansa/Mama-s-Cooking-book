@@ -20,3 +20,14 @@ mongoose.connect(URL,{
     useUnifiedTopologyL :true,
     useFindAndModify: false
 })
+
+const connection = mongoose.connection;
+//connecting to db once
+connection.once("open",() =>{
+    console.log("Mongodb connection success!")
+})
+
+//load the app in the port
+app.listen(PORT,()=>{
+    console.log(`server is up and running on port number ${PORT}`)
+})
