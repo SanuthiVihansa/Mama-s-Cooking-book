@@ -15,19 +15,17 @@ app.use(bodyParse.json()); //json has key value pairs
 const URL = process.env.MONGODB_URL;
 
 mongoose.connect(URL,{
-    useCreateIndex: true, //creating an index 
-    useNewUrlParse: true,
-    useUnifiedTopologyL :true,
-    useFindAndModify: false
-})
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
 const connection = mongoose.connection;
 //connecting to db once
 connection.once("open",() =>{
     console.log("Mongodb connection success!")
-})
+});
 
 //load the app in the port
 app.listen(PORT,()=>{
     console.log(`server is up and running on port number : ${PORT}`)
-})
+});
